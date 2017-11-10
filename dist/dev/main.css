@@ -1,0 +1,502 @@
+* {
+  box-sizing: border-box;
+}
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section {
+  display: block;
+}
+
+html,body {
+  height: 100%;
+}
+
+a img {
+  border: none;
+}
+
+blockquote {
+  quotes: none;
+}
+
+blockquote:before,blockquote:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption,th,td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  -webkit-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+  font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+  font-family: Georgia, Times, serif;
+}
+
+a[href]:not([class]) {
+  -webkit-transition: color 0.1s, background-color 0.1s;
+  transition: color 0.1s, background-color 0.1s;
+  color: #59889d;
+  text-decoration: none;
+}
+
+a[href]:not([class]):hover,a[href]:not([class]):active,a[href]:not([class]):focus {
+  color: #34505c;
+  text-decoration: none;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+img,video {
+  display: block;
+  width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+.methode-graf {
+  max-width: 35rem;
+  width: 90%;
+}
+
+.hide-accessible {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+}
+
+.hide-invisible {
+  visibility: hidden;
+}
+
+.hide-display {
+  display: none;
+}
+
+.skip-to-main {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+}
+
+.skip-to-main:focus {
+  width: auto;
+  height: auto;
+  background-color: #efefef;
+  padding: 0.5em;
+  z-index: 1;
+}
+
+.benton-bold {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.loaded-benton-bold .benton-bold {
+  font-family: 'Benton', Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.miller-regular {
+  font-family: Georgia, Times, serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.loaded-miller-regular .miller-regular {
+  font-family: 'Miller', Georgia, Times, serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ad-slot {
+  text-align: center;
+  border-top: 1px solid #e2e2df;
+  border-bottom: 1px solid #e2e2df;
+  padding: 0.5em 0 1em 0;
+  margin-bottom: 3em;
+}
+
+.ad-slot__overline {
+  font-size: 0.75em;
+  color: #666;
+  margin-bottom: 0.5em;
+}
+
+.ad-slot__overline a {
+  font-weight: bold;
+}
+
+.ad-slot__overline span:after {
+  content: '|';
+  display: inline-block;
+  margin: 0 0.5em;
+  color: #e2e2df;
+}
+
+.g-header {
+  width: 100%;
+  padding: 1rem;
+  color: #222;
+  border-bottom: 1px solid #ccc;
+  background-color: #fff;
+  color: #222;
+}
+
+.g-header svg {
+  fill: #222;
+}
+
+.g-header__inner {
+  position: relative;
+}
+
+.g-header__inner a {
+  text-decoration: none;
+  opacity: 0.75;
+  -webkit-transition: 0.2s ease all;
+  transition: 0.2s ease all;
+  text-decoration: none;
+}
+
+.g-header__inner a:hover {
+  opacity: 1;
+}
+
+.g-header__title {
+  text-align: left;
+  padding-left: 2.5em;
+  letter-spacing: 0.01em;
+  font-size: 0.9rem;
+}
+
+.g-header__logo {
+  top: 0;
+  position: absolute;
+}
+
+.g-header__share {
+  top: 0;
+  right: 0;
+  position: absolute;
+}
+
+.g-header__share-button {
+  margin-left: 15px;
+}
+
+.logo--lg {
+  display: none;
+}
+
+.logo--sm {
+  display: inline-block;
+}
+
+.g-footer {
+  text-align: center;
+  padding-top: 1.5em;
+}
+
+.teasers {
+  padding-top: 1em;
+  margin-top: 2em;
+}
+
+.teasers__title {
+  text-align: center;
+  margin: 0.5em auto;
+  max-width: 50%;
+  overflow: hidden;
+  color: #333;
+}
+
+.teasers__title:before,.teasers__title:after {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  width: 50%;
+  border-top: 1px solid #ccc;
+}
+
+.teasers__title:before {
+  right: 1em;
+  margin-left: -50%;
+}
+
+.teasers__title:after {
+  left: 1em;
+  margin-right: -50%;
+}
+
+.teasers__list {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.teasers__item {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.teasers__link {
+  text-decoration: none;
+  background-position: 25% 50%;
+  min-height: 15em;
+  background-size: cover;
+  color: rgba(255,255,255,0.75);
+  text-shadow: 0 0 5px #444;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.teasers__link:hover {
+  color: #fff;
+}
+
+.teasers__hed {
+  font-size: 1.5em;
+  width: 100%;
+  padding: 1em;
+}
+
+html,body {
+  height: 100%;
+  width: 100%;
+  background-color: #343332;
+}
+
+.graphichead {
+  font-family: 'BentonSans', Helvetica, Arial, sans-serif;
+  font-size: 1.2em;
+  font-weight: bold;
+  display: block;
+  margin-top: 30px;
+}
+
+.subtitle {
+  font-family: 'BentonSans', Helvetica, Arial, sans-serif;
+  font-size: 0.9em;
+  line-height: 1.4em;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+#map {
+  width: 100vw;
+  height: 100vh;
+ /*background-color: #343332; #c8d2d3*/
+  background-color: #343332;
+}
+
+#showYear {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-weight: bold;
+  font-family: 'BentonSans', Helvetica, Arial, sans-serif;
+  font-size: 3rem;
+  color: #fff;
+  opacity: 0.4;
+  z-index: 1000;
+}
+
+.info {
+  padding: 6px 8px;
+  font-family: 14px/16px Arial;
+  font-weight: Helvetica;
+  font-style: sans-serif;
+  background: #fff;
+  background: rgba(255,255,255,0.8);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 5px;
+}
+
+.info.leaflet-control {
+  margin: auto;
+  max-width: 350px;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.info h4 {
+  margin: 0 0 5px;
+  color: #000;
+  font-family: 'BentonSans', Helvetica, Arial, sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+  font-weight: bold;
+ /*color: #3F98DC;*/;
+}
+
+.info p {
+  font-family: 'BentonSans', Helvetica, Arial, sans-serif;
+  font-size: 0.8rem;
+  margin-top: 15px;
+  line-height: 1.2rem;
+}
+
+.info p span {
+  font-weight: bold;
+}
+
+.title {
+  height: 100vh;
+  width: 100vw;
+  color: #f00;
+ /*background-color: black;*/
+  font-family: 'BentonSans', Helvetica, Arial, sans-serif;
+  font-size: 5rem;
+  padding-top: 20%;
+  text-align: center;
+}
+
+.title .note div {
+  font-family: 'BentonSans', Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 100;
+  color: #fff;
+}
+
+.trigger {
+  padding-top: 100px;
+  min-height: 400px;
+}
+
+.contentsTrigger {
+  position: absolute;
+  top: 150%;
+  z-index: 1000;
+  background: rgba(55,55,55,0.6);
+  padding: 10px;
+ /*color: white*/;
+}
+
+.spacer {
+  padding-top: 20px;
+  min-height: 100px;
+}
+
+.wbackground {
+  z-index: 1000;
+  background-color: rgba(185,185,185,0.5);
+}
+
+.info.leaflet-control {
+  opacity: 0;
+}
+
+.countNum {
+  font-family: Miller;
+  font-weight: 400;
+  color: #f00;
+}
+
+@font-face {
+  font-family:'Benton';src:url("https://apps.bostonglobe.com/common/font/benton-bold.woff2") format('woff2'), url("https://apps.bostonglobe.com/common/font/benton-bold.woff") format('woff');font-weight:600;font-style:normal;
+}
+
+@font-face {
+  font-family:'Miller';src:url("https://apps.bostonglobe.com/common/font/miller-regular.woff2") format('woff2'), url("https://apps.bostonglobe.com/common/font/miller-regular.woff") format('woff');font-weight:400;font-style:normal;
+}
+
+@font-face {
+  font-family:'Benton';src:url("https://apps.bostonglobe.com/common/font/benton-bold.woff2") format('woff2'), url("https://apps.bostonglobe.com/common/font/benton-bold.woff") format('woff');font-weight:600;
+}
+
+@font-face {
+  font-family:'Miller';src:url("https://apps.bostonglobe.com/common/font/miller-bold.woff2") format('woff2'), url("https://apps.bostonglobe.com/common/font/miller-bold.woff") format('woff');font-weight:600;
+}
+
+@media screen and (-ms-high-contrast: active) {
+  svg {
+    fill: #0074d9;
+  }
+}
+
+@media screen and (-ms-high-contrast: black-on-white) {
+  svg {
+    fill: #333;
+  }
+}
+
+@media screen and (-ms-high-contrast: white-on-black) {
+  svg {
+    fill: #efefef;
+  }
+}
+
+@media only screen and (min-width: 35em) {
+  .teasers__list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+@media only screen and (min-width: 50em) {
+  .g-header__title {
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .logo--lg {
+    display: inline-block;
+  }
+
+  .logo--sm {
+    display: none;
+  }
+}

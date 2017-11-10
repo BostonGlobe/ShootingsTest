@@ -1,0 +1,153 @@
+//=======================
+// Custom styles
+//=======================
+
+// To use images in assets folder:
+// ex: background-image url($assets-path + 'filename.jpg')
+
+// See `base` folder for variables (color, font, media queries)
+/* See the documentation for how to load in regular weight versions */
+@font-face {
+  font-family: 'Benton';
+  src: url('https://apps.bostonglobe.com/common/font/benton-bold.woff2') format('woff2'), url('https://apps.bostonglobe.com/common/font/benton-bold.woff') format('woff');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Miller';
+  src: url('https://apps.bostonglobe.com/common/font/miller-bold.woff2') format('woff2'), url('https://apps.bostonglobe.com/common/font/miller-bold.woff') format('woff');
+  font-weight: 600;
+}
+html,body{
+  height:100%;
+  width: 100%;
+  background-color:#343332;
+}
+
+.graphichead {font-family:'BentonSans', Helvetica, Arial, sans-serif; font-size:1.2em;font-weight:bold; display:block; margin-top:30px;}
+.subtitle {font-family:'BentonSans', Helvetica, Arial, sans-serif; font-size:0.9em; line-height:1.4em; margin-top:10px; margin-bottom:15px;}
+/* =========================== */
+/* Globe font stack examples
+/* =========================== */
+
+/* Serif (Miller) */
+/* font-family: 'Miller', Georgia, Times New Roman, Times, serif; */
+/* font-weight: 600; */
+
+/* Sans-serif (Benton) */
+/* font-family: 'Benton', Helvetica, Arial, sans-serif; */
+/* font-weight: 600; */
+
+/* Serif */
+/* font-family: 'Georgia', Times New Roman, Times, serif; */
+
+/* Sans-serif */
+/* font-family: 'Helvetica', Arial, sans-serif; */
+
+/* =========================== */
+/* Graphic styles
+/* =========================== */
+
+#map{
+  width: 100vw;
+  height: 100vh;
+  /*background-color: #343332; #c8d2d3*/
+  background-color: #343332;
+}
+#showYear{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-weight: bold;
+  font-family: 'BentonSans', Helvetica, Arial, sans-serif;
+  font-size: 3rem;
+  color: white;
+  opacity: 0.4;
+  z-index: 1000;
+}
+
+
+.info {
+  padding: 6px 8px;
+  font: 14px/16px Arial, Helvetica, sans-serif;
+  background: white;
+  background: rgba(255,255,255,0.8);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 5px;
+}
+
+.info.leaflet-control{
+  margin: auto;
+  max-width: 350px;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.info h4 {
+  margin: 0 0 5px;
+  color: black;
+  font-family:'BentonSans', Helvetica, Arial, sans-serif;
+  font-size:1.3rem;
+  line-height: 1.6rem;
+  font-weight:bold;
+  /*color: #3F98DC;*/
+}
+.info p{
+  font-family: 'BentonSans', Helvetica, Arial, sans-serif;
+  font-size:0.8rem;
+  margin-top: 15px;
+  line-height: 1.2rem;
+}
+
+.info p span{
+  font-weight: bold;
+}
+/*.shootingCircle{*/
+/*pointer-events: all;*/
+/*}*/
+
+.title{
+  height: 100vh;
+  width: 100vw;
+  color: red;
+  /*background-color: black;*/
+  font-family: 'BentonSans', Helvetica, Arial, sans-serif;
+  font-size: 5rem;
+  padding-top: 20%;
+  text-align: center;
+}
+.title .note div{
+  font-family: 'BentonSans', Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 100;
+  color: white
+}
+.trigger{
+  padding-top: 100px;
+  min-height: 400px;
+}
+.contentsTrigger{
+  position: absolute;
+  top: 150%;
+  z-index: 1000;
+  background: rgba(55, 55, 55, 0.6);
+  padding: 10px;
+  /*color: white*/
+}
+.spacer{
+  padding-top: 20px;
+  min-height: 100px;
+
+}
+.wbackground{
+  z-index: 1000;
+  background-color: rgba(185, 185, 185, 0.5);
+}
+.info.leaflet-control{
+  opacity: 0;
+}
+.countNum{
+  font-family Miller
+  font-weight 400
+  color: red
+}

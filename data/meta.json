@@ -1,0 +1,17 @@
+{
+    "title": "Graphic title",
+    "author": "",
+    "description": "Description of graphic",
+    "keywords": "Comma, delimited, for, seo",
+    "url": "https://apps.bostonglobe.com/opinion/graphics/2017/11/massshootingnewapp",
+    "imageUrl": "https://apps.bostonglobe.com/path/to/image",
+    "section": "Opinion",
+    "sectionUrl": "http://www.bostonglobe.com/opinion",
+    "credits": "",
+    "teasers": [],
+    "social": true,
+    "meter": true,
+    "socialConnect": true,
+    "progressBar": true,
+    "ads": false
+}
