@@ -21,11 +21,12 @@
 html,body{
   height:100%;
   width: 100%;
-  background-color:#343332;
+  background-color:#edf0ee;
+  overflow-x hidden
 }
 
-.graphichead {font-family:'BentonSans', Helvetica, Arial, sans-serif; font-size:1.2em;font-weight:bold; display:block; margin-top:30px;}
-.subtitle {font-family:'BentonSans', Helvetica, Arial, sans-serif; font-size:0.9em; line-height:1.4em; margin-top:10px; margin-bottom:15px;}
+.graphichead {font-family:'BentonSans', Helvetica, Arial, sans-serif; font-size:3em;font-weight:bold; display:block; margin-top:30px;}
+.subtitle {font-family:'BentonSans', Helvetica, Arial, sans-serif; font-size:1.2em; line-height:1.5em; margin-top:10px; margin-bottom:15px;}
 /* =========================== */
 /* Globe font stack examples
 /* =========================== */
@@ -49,10 +50,13 @@ html,body{
 /* =========================== */
 
 #map{
+  //position fixed;
+  //left:0%;
+  //top:6%;
   width: 100vw;
   height: 100vh;
   /*background-color: #343332; #c8d2d3*/
-  background-color: #343332;
+  background-color: #c8d2d3;
 }
 #showYear{
   position: absolute;
@@ -61,7 +65,7 @@ html,body{
   font-weight: bold;
   font-family: 'BentonSans', Helvetica, Arial, sans-serif;
   font-size: 3rem;
-  color: white;
+  color: black;
   opacity: 0.4;
   z-index: 1000;
 }
@@ -126,28 +130,62 @@ html,body{
   padding-top: 100px;
   min-height: 400px;
 }
+  .trigger p{
+    //padding 10px
+    //background-color rgba(255, 255, 255, .4)
+  }
 .contentsTrigger{
-  position: absolute;
-  top: 150%;
+  //position: absolute;
+  //top: 150%;
   z-index: 1000;
-  background: rgba(55, 55, 55, 0.6);
+ // background: rgba(55, 55, 55, 0.6);
   padding: 10px;
   /*color: white*/
 }
 .spacer{
   padding-top: 20px;
-  min-height: 100px;
+  min-height: 300px;
 
 }
 .wbackground{
   z-index: 1000;
-  background-color: rgba(185, 185, 185, 0.5);
+  background-color: rgba(205, 205, 205, 0.5);
+  //position absolute
+  right 0
+  //top 110%
+
 }
 .info.leaflet-control{
-  opacity: 0;
+  opacity: .6;
 }
 .countNum{
   font-family Miller
   font-weight 400
   color: red
+}
+  #spacer2{
+    height 1000px;
+  }
+
+@media only screen and (max-width: 800px) {
+  .wbackground{
+    background-color rgba(205, 205, 205, 0);
+  }
+  .trigger p{
+  padding 10px
+  background-color rgba(255, 255, 255, .4)
+  }
+  .info.leaflet-control{
+    opacity: 0;
+  }
+}
+.trigger span{
+  font-size 1.4rem
+  font-family Impact
+}
+  .trigger span.active{
+    background-color rgba(255, 255, 20, .4)
+  }
+.col-md-9{
+  padding-left 0
 }
