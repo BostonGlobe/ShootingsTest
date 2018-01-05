@@ -1,23 +1,3 @@
-//=======================
-// Custom styles
-//=======================
-
-// To use images in assets folder:
-// ex: background-image url($assets-path + 'filename.jpg')
-
-// See `base` folder for variables (color, font, media queries)
-/* See the documentation for how to load in regular weight versions */
-@font-face {
-  font-family: 'Benton';
-  src: url('https://apps.bostonglobe.com/common/font/benton-bold.woff2') format('woff2'), url('https://apps.bostonglobe.com/common/font/benton-bold.woff') format('woff');
-  font-weight: 600;
-}
-
-@font-face {
-  font-family: 'Miller';
-  src: url('https://apps.bostonglobe.com/common/font/miller-bold.woff2') format('woff2'), url('https://apps.bostonglobe.com/common/font/miller-bold.woff') format('woff');
-  font-weight: 600;
-}
 html,body{
   height:100%;
   width: 100%;
@@ -25,35 +5,29 @@ html,body{
   overflow-x hidden
 }
 
-.graphichead {font-family:'BentonSans', Helvetica, Arial, sans-serif; font-size:3em;font-weight:bold; display:block; margin-top:30px;}
-.subtitle {font-family:'BentonSans', Helvetica, Arial, sans-serif; font-size:1.2em; line-height:1.5em; margin-top:10px; margin-bottom:15px;}
-/* =========================== */
-/* Globe font stack examples
-/* =========================== */
+.g-header{
+  z-index 100
+  position fixed
+  top 0
+}
+.shooting-all{
+  position absolute
+  padding-right 0px
+}
+.map-container{
+  width 100vw
+  height 100vh
+  position fixed
+  top 50px
+  left 0
+}
 
-/* Serif (Miller) */
-/* font-family: 'Miller', Georgia, Times New Roman, Times, serif; */
-/* font-weight: 600; */
-
-/* Sans-serif (Benton) */
-/* font-family: 'Benton', Helvetica, Arial, sans-serif; */
-/* font-weight: 600; */
-
-/* Serif */
-/* font-family: 'Georgia', Times New Roman, Times, serif; */
-
-/* Sans-serif */
-/* font-family: 'Helvetica', Arial, sans-serif; */
-
-/* =========================== */
-/* Graphic styles
-/* =========================== */
 
 #map{
   //position fixed;
   //left:0%;
   //top:6%;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   /*background-color: #343332; #c8d2d3*/
   background-color: #c8d2d3;
@@ -127,13 +101,10 @@ html,body{
   color: white
 }
 .trigger{
-  padding-top: 100px;
-  min-height: 400px;
+  padding-top: 300px;
+  min-height: 800px;
 }
-  .trigger p{
-    //padding 10px
-    //background-color rgba(255, 255, 255, .4)
-  }
+
 .contentsTrigger{
   //position: absolute;
   //top: 150%;
@@ -143,18 +114,31 @@ html,body{
   /*color: white*/
 }
 .spacer{
-  padding-top: 20px;
-  min-height: 300px;
-
+  padding-top: 300px;
+  min-height: 800px;
 }
-.wbackground{
-  z-index: 1000;
-  background-color: rgba(205, 205, 205, 0.5);
-  //position absolute
-  right 0
-  //top 110%
-
+.shooting-title{
+  min-height 800px
+  padding-top 200px
 }
+.graphichead, .subtitle, .shooting-content{
+  background-color rgba(255, 255, 255, 0.6)
+  padding 20px
+}
+
+.graphichead{
+  font-size 3rem
+  font-family Benton, Helvetica Neue, Helvetica, Arial, sans-serif
+}
+.subtitle{
+  font-size 1.15rem
+  font-family 'BentonSans', Helvetica, Arial, sans-serif
+}
+.shooting-content{
+  font-size 1.15rem
+  line-height 1.5rem
+}
+
 .info.leaflet-control{
   opacity: .6;
 }
@@ -168,9 +152,6 @@ html,body{
   }
 
 @media only screen and (max-width: 800px) {
-  .wbackground{
-    background-color rgba(205, 205, 205, 0);
-  }
   .trigger p{
   padding 10px
   background-color rgba(255, 255, 255, .4)
@@ -189,3 +170,6 @@ html,body{
 .col-md-9{
   padding-left 0
 }
+  .fixed{
+    position fixed
+  }

@@ -358,8 +358,11 @@
 	        }
 	    });
 
-	    var scene0 = new ScrollMagic.Scene({ triggerElement: "#spacer0", duration: getElementLength("spacer0"), triggerHook: 0, reverse: true }).setPin("#map").on('start', function () {
+	    // d3.select('#map').classed('fixed', true);
+
+	    var scene0 = new ScrollMagic.Scene({ triggerElement: "#spacer0", duration: getElementLength("spacer0"), triggerHook: 0 }).addIndicators({ name: "0 (duration: 0)" }).on('start', function () {
 	        d3.selectAll('span').classed('active', false);
+	        map.flyTo([40.104, -97.485], 4);
 	        // d3.select('.wbackground').transition().style('opacity', 0);
 	        circleGroup.eachLayer(function (circle) {
 	            // console.log(layer);
@@ -367,7 +370,7 @@
 	        });
 	    });
 
-	    var scene = new ScrollMagic.Scene({ triggerElement: "#trigger0", duration: getElementLength("trigger0"), triggerHook: 0, reverse: true }).setPin("#map").on('start', function () {
+	    var scene = new ScrollMagic.Scene({ triggerElement: "#trigger0", duration: getElementLength("trigger0"), triggerHook: 0 }).addIndicators({ name: "00 (duration: 0)" }).on('start', function () {
 	        d3.selectAll('span').classed('active', false);
 	        d3.select('#trigger0').select('span').classed('active', true);
 	        circleGroup.eachLayer(function (layer) {
@@ -378,11 +381,12 @@
 	                });
 	            }
 	        });
+	        map.flyTo([40.104, -97.485], 5);
 	        geoStates.setStyle(tileStyle);
 	        //d3.select('.wbackground').transition().style('opacity', 1);
 	    });
 
-	    var scene0_1 = new ScrollMagic.Scene({ triggerElement: "#trigger0_1", duration: getElementLength("trigger0_1"), triggerHook: 0, reverse: true }).setPin("#map").on('start', function () {
+	    var scene0_1 = new ScrollMagic.Scene({ triggerElement: "#trigger0_1", duration: getElementLength("trigger0_1"), triggerHook: 0 }).addIndicators({ name: "0_1 (duration: 0)" }).on('start', function () {
 	        d3.selectAll('span').classed('active', false);
 	        d3.select('#trigger0_1').select('span').classed('active', true);
 	        map.flyTo([40.104, -97.485], 4);
@@ -400,7 +404,7 @@
 	        //d3.select('.wbackground').transition().style('opacity', 1);
 	    });
 
-	    var sceneA = new ScrollMagic.Scene({ triggerElement: "#trigger1", duration: getElementLength("trigger1"), triggerHook: 0, reverse: true }).setPin("#map").on('start', function () {
+	    var sceneA = new ScrollMagic.Scene({ triggerElement: "#trigger1", duration: getElementLength("trigger1"), triggerHook: 0 }).addIndicators({ name: "1 (duration: 0)" }).on('start', function () {
 
 	        circleGroup.eachLayer(function (circle) {
 	            // console.log(layer);
@@ -427,7 +431,7 @@
 	        map.flyTo([39.938980, -85.795071], 4.5);
 	    });
 
-	    var sceneA2 = new ScrollMagic.Scene({ triggerElement: "#trigger1_2", duration: getElementLength("trigger1_2"), triggerHook: 0, reverse: true }).setPin("#map").on('start', function () {
+	    var sceneA2 = new ScrollMagic.Scene({ triggerElement: "#trigger1_2", duration: getElementLength("trigger1_2"), triggerHook: 0 }).addIndicators({ name: "1_2 (duration: 0)" }).on('start', function () {
 
 	        circleGroup.eachLayer(function (circle) {
 	            circle.setStyle({
@@ -458,16 +462,16 @@
 	    //         map.flyTo([36.763004, -119.666739], 9);
 	    //     });
 
-	    var sceneB = new ScrollMagic.Scene({ triggerElement: '#trigger2', duration: getElementLength("trigger2"), triggerHook: 0, reverse: true }) // All races - charter schools
-	    .setPin("#map").on('start', function () {
+	    var sceneB = new ScrollMagic.Scene({ triggerElement: '#trigger2', duration: getElementLength("trigger2"), triggerHook: 0 }) // All races - charter schools
+	    .addIndicators({ name: "2 (duration: 0)" }).on('start', function () {
 	        geoStates.setStyle(tileStyle);
 	        d3.selectAll('span').classed('active', false);
 	        d3.select('#trigger2').select('span').classed('active', true);
 	        map.flyTo([36.095, -115.171667], 7);
 	    });
 
-	    var sceneC = new ScrollMagic.Scene({ triggerElement: '#trigger3', duration: getElementLength("trigger3") + 1200, triggerHook: 0, reverse: true }) // All races - charter schools
-	    .setPin("#map").on('start', function () {
+	    var sceneC = new ScrollMagic.Scene({ triggerElement: '#trigger3', duration: getElementLength("trigger3") + 1200, triggerHook: 0 }) // All races - charter schools
+	    .addIndicators({ name: "3 (duration: 0)" }).on('start', function () {
 	        d3.selectAll('span').classed('active', false);
 	        d3.select('#trigger3').select('span').classed('active', true);
 	        map.flyTo([40.104, -97.485], 4);

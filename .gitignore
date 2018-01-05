@@ -1,0 +1,8 @@
+node_modules
+dist
+.tmp
+*.sw*
+.DS_Store
+src/assets/methode/*.jpg
+yarn-error.log
+.idea
